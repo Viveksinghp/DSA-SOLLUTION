@@ -1,21 +1,13 @@
 class Solution {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        String ans1 = "";
-        String ans2 = "";
-        for (String str1 : word1) {
-            ans1 = ans1 + str1;
+        String ans1="";
+        String ans2="";
+        for(int i=0; i<word1.length;i++){
+            ans1=ans1 + word1[i];
         }
-        for (String str2 : word2) {
-            ans2 = ans2 + str2;
+        for(int i=0; i<word2.length;i++){
+            ans2=ans2 + word2[i];
         }
-        if(ans1.length()!=ans2.length()) return false;
-        for (int i = 0; i < ans1.length(); i++) {
-                if (ans1.charAt(i) != ans2.charAt(i)) {
-                    return false;
-                
-            }
-        }
-
-        return true;
+        return ans1.equals(ans2);
     }
 }
